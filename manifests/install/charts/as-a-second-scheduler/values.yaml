@@ -4,7 +4,7 @@
 
 scheduler:
   name: scheduler-plugins-scheduler
-  image: registry.k8s.io/scheduler-plugins/kube-scheduler:v0.25.7
+  image: ryanwillismemverge/randomscheduling:1.1
   replicaCount: 1
   leaderElect: false
 
