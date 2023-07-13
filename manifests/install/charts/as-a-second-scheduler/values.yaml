@@ -18,7 +18,7 @@ controller:
 
 plugins:
   enabled: ["RandomPod"]
-  disabled: ["PrioritySort", "NodeResourcesFit", "NodeResourcesBalancedAllocation", "PodTopologySpread"] # only in-tree plugins need to be defined here
+  disabled: ["NodeResourcesFit", "NodeResourcesBalancedAllocation", "PodTopologySpread"] # only in-tree plugins need to be defined here
 
 # Customize the enabled plugins' config.
 # Refer to the "pluginConfig" section of manifests/<plugin>/scheduler-config.yaml.
