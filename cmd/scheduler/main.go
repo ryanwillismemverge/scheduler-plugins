@@ -62,7 +62,7 @@ func main() {
 		app.WithPlugin(podstate.Name, podstate.New),
 		app.WithPlugin(qos.Name, qos.New),
 		// Custom plugins below.
-		app.WithPlugin(randompod.Name, randompod.New)
+		app.WithPlugin(randompod.Name, randompod.New),
 	)
 
 	code := cli.Run(command)
