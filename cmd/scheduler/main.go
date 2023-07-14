@@ -32,6 +32,7 @@ import (
 	"sigs.k8s.io/scheduler-plugins/pkg/noderesourcetopology"
 	"sigs.k8s.io/scheduler-plugins/pkg/podstate"
 	"sigs.k8s.io/scheduler-plugins/pkg/random"
+	"sigs.k8s.io/scheduler-plugins/pkg/elasticmemory"
 	"sigs.k8s.io/scheduler-plugins/pkg/preemptiontoleration"
 	"sigs.k8s.io/scheduler-plugins/pkg/qos"
 	"sigs.k8s.io/scheduler-plugins/pkg/trimaran/loadvariationriskbalancing"
@@ -63,6 +64,7 @@ func main() {
 		app.WithPlugin(qos.Name, qos.New),
 		// Custom plugins below.
 		app.WithPlugin(randompod.Name, randompod.New),
+		app.WithPlugin(elasticmemory.Name, elasticmemory.New),
 	)
 
 	code := cli.Run(command)
